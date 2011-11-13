@@ -1,0 +1,11 @@
+apply plugin: 'build-announcements'
+
+announce {
+  username = 'dstricks'
+  password = 'xxx'
+}
+
+task ann << {
+  announce.announce("Gradle is posting to my Twitter account", "twitter")
+  announce.announce("Gradle is posting to my local machine", "local")
+}
